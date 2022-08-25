@@ -1,0 +1,24 @@
+function LetterChanges(str) { 
+    var result="";
+
+    for(var i=0; i < str.length; i++) {
+
+      var letters=str[i];
+
+    if(letters=="z"){
+      letters="a";
+    }else if(str.charCodeAt(i)>="a".charCodeAt(0)&& str.charCodeAt(i) <="z".charCodeAt(0)){
+      letters=String.fromCharCode(str.charCodeAt(i)+1);
+    }if(letters=="a"|| letters=="e"|| letters=="i"|| letters=="o" || letters=="u"){
+      letters=letters.toUpperCase();
+    }
+    result+=letters;
+ }
+   
+  // code goes here  
+  return result; 
+ }
+
+LetterChanges("hello");
+
+// keep this function call here 
